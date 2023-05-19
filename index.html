@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="app.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="head-bar">
+</div>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="content">
+    <div class="music_list">
+        <div class="box">
+            <div class="box_content1">
+                <img src="./info/My Dearest.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text1">My Dearest</p>
+                <p id="text2">supercell</p>
+                <div class="box_btn">
+                    <img id="box1" onclick="playMusic(1)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_content2">
+                <img src="./info/阿杜.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text3">他一定很爱你<p>
+                <p id="text4">阿杜</p>
+                <div class="box_btn">
+                    <img id="box2" onclick="playMusic(2)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_content3">
+                <img src="./info/Stewart Mac.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text5">I Love You<p>
+                <p id="text6">Stewart Mac</p>
+                <div class="box_btn">
+                    <img id="box3" onclick="playMusic(3)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_content4">
+                <img src="./info/true strength.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text7">True Strength<p>
+                <p id="text8">John Dreamer</p>
+                <div class="box_btn">
+                    <img id="box4" onclick="playMusic(4)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_content5">
+                <img src="./info/什么都可以.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text9">什么都可以<p>
+                <p id="text10">黄晓明</p>
+                <div class="box_btn">
+                    <img id="box5" onclick="playMusic(5)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_content6">
+                <img src="./info/周杰伦.jpg" style="width: 200px;height: 200px;" alt="">
+                <p id="text11">听见下雨的声音<p>
+                <p id="text12">周杰伦</p>
+                <div class="box_btn">
+                    <img id="box6" onclick="playMusic(6)" src="./btns/play.jpg" style="width: 22px;height: 22px;" alt="">
+                </div>
+                <img class="pro" src="./btns/progressed.jpg" style="width: 200px">
+            </div>
+        </div>
+    </div>
+    <div class="music_play">
+        <div class="music_player">
+            <div id="music_box">
+                <audio id="music_audio"  onended="next()" style="width:99%;padding-left:2px" src="./source/1.mp3">浏览器不支持</audio>
+                <img class="line" src="./btns/progress.jpg" style="width:630px">
+                <span id="progress-line"></span>
+            </div>
+        </div>
+        <div class="music_btn">
+            <div class="music_bt">
+                <div class="music_back">
+                    <img onclick="previous()" src="./btns/back.jpg" style="width: 27px;height: 38px;margin-right: 1px;" alt="">
+                 </div>
+            </div>
+            <div class="music_bt">
+                <div class="pause">
+                    <img id="playBtn" onclick="playIt()" src="./btns/play.jpg" style="width: 36px;height: 38px;margin-left: 1px;margin-right: 1px;" alt="">
+                </div>
+            </div>
+            <div class="music_bt">
+                <div class="music_next">
+                    <img onclick="next()" src="./btns/next.jpg" style="width: 27px;height: 38px;margin-left: 1px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="music_info">
+            <div id="info">
+                <p id="songName">My Dearest</p>
+                <p id="singer">supercell</p>
+            </div>
+        </div>
+        <div class="volume">
+            <div class="taskBoxLinks">
+                <img src="./btns/progressed.jpg" style="width: 80px;height: 2px">
+                <img id="d-btn" src="./btns/d.gif" style="width: 8px;height: 8px">
+                <span id="volume-line"></span>
+            </div>
+        </div>
+        <div class="trumpet">
+            <img id="v-btn" onclick="volumeOn()" src="./btns/v.gif" style="width: 10px;height: 10px">
+        </div>
+        <div id="progress" class="time">
+            <span></span>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
